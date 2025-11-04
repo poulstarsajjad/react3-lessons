@@ -4,6 +4,7 @@ import Shop from "./pages/shop/Shop";
 import Blog from "./pages/blog/Blog";
 import Contact from "./pages/contact/Contact";
 import Cart from "./pages/cart/Cart";
+import Auth from "./pages/auth/Auth";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/auth" element={<Auth />} />
     </Routes>
   )
 }
