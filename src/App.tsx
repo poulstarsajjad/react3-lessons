@@ -1,12 +1,19 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Shop from "./pages/shop/Shop";
+import Blog from "./pages/blog/Blog";
+import Contact from "./pages/contact/Contact";
+import Cart from "./pages/cart/Cart";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-gray-600 bg-red-200 p-5 font-bold text-5xl">forza milan</h1>
-      <p>
-        https://www.figma.com/community/file/1331381641303792117/furniture-ecommerce-website-ui
-      </p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/cart" element={<Cart />} />
+    </Routes>
   )
 }
 
