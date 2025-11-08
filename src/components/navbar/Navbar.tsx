@@ -39,14 +39,14 @@ function Navbar() {
     ];
 
   return (
-    <div className="w-full h-20 flex items-center">
+    <div className="w-full h-20 grid items-center">
       <Container>
         <div className="grid grid-cols-3 items-center">
-            <div className="w-24">
+            <div className="flex items-center justify-center w-24">
                 <img src="logo.png" alt="logo" />
             </div>
 
-            <ul className="flex justify-center gap-15 ">
+            <ul className="flex items-center justify-center gap-15">
                 {
                     navs.map((nav)=>(
                         <li className="text-xl text-orange-400 text-shadow-sm text-shadow-orange-500 font-medium cursor-pointer transition duration-300 hover:text-orange-300" key={nav.name}>
@@ -56,7 +56,7 @@ function Navbar() {
                 }
             </ul>
 
-            <ul className="flex justify-end items-center gap-10">
+            <ul className="flex justify-end  gap-10">
                 {
                     btns.map((item)=>(
                         <li key={item.link} className="w-6 transition duration-200 hover:scale-120">

@@ -27,7 +27,7 @@ function Contact() {
                 Address
               </h1>
               <p className="ml-18 font-medium text-gray-700">
-                Iran-Gilan <br /> Rash-Golsar
+                Iran-Gilan <br /> Rasht-Golsar
               </p>
             </div>
 

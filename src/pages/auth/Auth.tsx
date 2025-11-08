@@ -1,74 +1,46 @@
 import { useState } from "react";
+import Navbar from "../../components/navbar/Navbar";
+import Banner from "../../components/banner/Banner";
+import Footer from "../../components/footer/Footer";
+
 
 function Auth() {
-  const [isOpen, setIsOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
 
-  const toggleModal = () => setIsOpen(!isOpen);
   const switchMode = () => setIsLogin(!isLogin);
 
   return (
     <div>
-      <button
-        onClick={toggleModal}
-        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-      >
-        {isLogin ? "Login" : "Register"}
-      </button>
+      <Navbar />
+      <Banner title="Login / Register" />
 
-      {isOpen && (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-2xl shadow-lg w-80 relative">
-            <h2 className="text-xl font-semibold text-center mb-4">
-              {isLogin ? "Login" : "Create Account"}
-            </h2>
+      <div className="flex items-center justify-center py-15">
+        <div className="px-6 py-10 rounded-2xl shadow-md shadow-orange-500 w-90 bg-orange-50">
+          <h2 className="text-2xl text-orange-500 font-bold text-center mb-4">
+            {isLogin ? "Login" : "Register"}
+          </h2>
 
-            <form className="flex flex-col gap-3">
-              {!isLogin && (
-                <input
-                  type="text"
-                  placeholder="Username"
-                  className="border p-2 rounded-md"
-                />
-              )}
-              <input
-                type="email"
-                placeholder="Email"
-                className="border p-2 rounded-md"
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                className="border p-2 rounded-md"
-              />
+          <form className="flex flex-col gap-4">
+            {!isLogin && (
+              <input type="text" placeholder="Username" className="border border-gray-400 py-2 px-4 outline-none rounded-md" />
+            )}
+            <input type="email" placeholder="Email" className="border border-gray-400 py-2 px-4 outline-none rounded-md"/>
+            <input type="password" placeholder="Password" className="border border-gray-400 py-2 px-4 outline-none rounded-md" />
 
-              <button
-                type="submit"
-                className="bg-blue-600 text-white py-2 rounded-md mt-2 hover:bg-blue-700"
-              >
-                {isLogin ? "Login" : "Register"}
-              </button>
-            </form>
-
-            <p className="text-sm text-center mt-3">
-              {isLogin ? "Don’t have an account?" : "Already have an account?"}{" "}
-              <button
-                onClick={switchMode}
-                className="text-blue-600 hover:underline"
-              >
-                {isLogin ? "Register" : "Login"}
-              </button>
-            </p>
-
-            <button
-              onClick={toggleModal}
-              className="absolute top-2 right-3 text-gray-500 hover:text-black"
-            >
-              ✕
+            <button type="submit" className="bg-orange-400 text-white py-2 rounded-md mt-2 cursor-pointer transition duration-300 hover:bg-orange-500">
+              {isLogin ? "Login" : "Register"}
             </button>
-          </div>
+          </form>
+            
+          <p className="text-sm text-center mt-3">
+            {isLogin ? "Don’t have an account?" : "Already have an account?"}{" "}  {/* برای فاصله متن و دکمه */}
+            <button onClick={switchMode} className="text-blue-600 font-medium transition duration-700 hover:underline cursor-pointer">
+              {isLogin ? "Register" : "Login"}
+            </button>
+          </p>
         </div>
-      )}
+      </div>
+      <Footer />
     </div>
   );
 }

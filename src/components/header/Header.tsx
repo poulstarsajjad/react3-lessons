@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -10,7 +11,9 @@ function Header() {
         <p className="font-medium mb-5 text-gray-600">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vel ipsa facere sed  <br /> similique consectetur suscipit, inventore doloribus! Exercitationem,
         </p>
-        <button className="bg-orange-400 border-orange-400 py-5 w-60 text-white font-medium cursor-pointer transition duration-300 hover:bg-orange-500">BUY NOW</button>
+        <Link to="/shop">
+          <button className="bg-orange-400 border-orange-400 py-5 w-60 text-white font-medium cursor-pointer transition duration-300 hover:bg-orange-500">BUY NOW</button>
+        </Link>
       </div>
     </div>
   )

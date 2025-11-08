@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Product from "../product/Product";
 
-interface Iproducts{
+export interface Iproducts{
     id: number;
     title: string;
     description: string;
     images: string;
-    price: number
+    price: number;
+    rating: number
 }
 
 function OurProducts() {
@@ -32,15 +34,9 @@ function OurProducts() {
         <div className="grid grid-cols-4 gap-10">
             {
                 visibleProducts.map((item)=>(
-                    <div className="bg-orange-50 pb-5 opacity-0 animate-fadeIn" key={item.id}>
-                        <img src={item.images[0]} alt="" />
-                        <h2 className="text-2xl font-bold px-5">{item.title}</h2>
-                        <p className="text-gray-500 px-5 my-3 line-clamp-2">{item.description}</p>
-                        <span className="font-bold px-5 ">{item.price}$</span>
-                    </div>
+                    <Product key={item.id} {...item} />
                 ))
             }
-
         </div>
 
         {
@@ -57,4 +53,4 @@ function OurProducts() {
 export default OurProducts;
 
 
-//https://dummyjson.com/products?limit=10&skip=171
+//https://dummyjson.com/products?limit=20&skip=172
