@@ -1,6 +1,7 @@
 interface Iprops{
     title: string
 }
+
 function Banner({title}: Iprops) {
   return (
     <div className="flex items-center justify-center bg-[url('/banner1.webp')] bg-cover bg-center w-full h-90">

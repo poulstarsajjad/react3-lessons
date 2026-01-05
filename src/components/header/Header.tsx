@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="bg-[url('/header5.jpg')] bg-cover bg-center w-full h-lvh relative">
-      <div className="bg-orange-100 w-1/2 h-1/2 absolute right-15 top-1/4 flex flex-col pl-10 py-10 shadow-lg">
+      <div className="bg-orange-100 w-1/2 h-2/5 absolute right-0 top-1/4 flex flex-col justify-center pl-10 py-10 shadow-lg">
         <h3 className="font-semibold mb-3 tracking-widest">New Arrival</h3>
         <h1 className="text-orange-400 text-5xl font-bold mb-5">
             Discover Our <br /> New Collection

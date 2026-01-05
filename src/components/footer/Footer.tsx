@@ -16,7 +16,7 @@ function Footer() {
 
             <div>
                 <h3 className="text-gray-400 font-semibold mb-12">Links</h3>
-                <ul className="flex flex-col gap-10 font-semibold">
+                <ul className="flex flex-col gap-10 font-semibold footer">
                     <li>Home</li>
                     <li>Shop</li>
                     <li>About</li>
@@ -26,7 +26,7 @@ function Footer() {
 
             <div>
                 <h3 className="text-gray-400 font-semibold mb-12">Help</h3>
-                <ul className="flex flex-col gap-10 font-semibold">
+                <ul className="flex flex-col gap-10 font-semibold footer">
                     <li>Payment Options</li>
                     <li>Returns</li>
                     <li>Privacy Policies</li>
@@ -45,7 +45,7 @@ function Footer() {
         <div className="h-0.5 bg-gray-300 mt-15"></div>
 
         <p className="font-medium my-10">
-            2025 Poul Star. All rights reverved
+            2026 Poul Star &#169; All rights reverved
         </p>
       </Container>
     </div>

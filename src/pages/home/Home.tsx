@@ -13,7 +13,7 @@ function Home() {
       <Header />
 
       <Container>
-        <div className="my-15 mx-auto text-center">
+        <div className="mb-10 mt-30 mx-auto text-center">
           <h2 className="text-4xl font-bold">Browse The Range</h2>
           <p className="text-gray-600 mt-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugit minima
@@ -21,7 +21,7 @@ function Home() {
         </div>
 
       
-        <div className="flex gap-10 mb-20">
+        <div className="flex gap-10 mb-30">
           <div className="hover:scale-95 transition duration-500 hover:bg-orange-50 text-orange-400">
             <img src="https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/3.webp" alt="" />
             <h4 className="text-2xl font-medium ml-5 mb-5 text-center">Jewellery</h4>

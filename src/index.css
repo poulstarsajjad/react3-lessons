@@ -13,3 +13,10 @@
   animation: fadeIn 0.7s ease-in-out forwards;
 }
 
+.footer li{
+  cursor: pointer;
+}
+
+.footer li:hover{
+  text-decoration: underline orange 2px;
+}

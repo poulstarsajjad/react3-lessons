@@ -59,13 +59,13 @@ function Contact() {
           <div>
             <form className="flex flex-col mb-20">
               <label className="font-semibold">Your Name</label>
-              <input type="text" placeholder="Poul Star" className="border border-gray-400 rounded-md py-3 px-5 outline-none" />
+              <input type="text" placeholder="Poul Star" className="border border-gray-400 rounded-md py-3 px-5 outline-orange-400" />
               <label className="mt-20 font-semibold">Email address</label>
-              <input type="email" placeholder="example@email.com" className="border border-gray-400 rounded-md py-3 px-5 outline-none" />
+              <input type="email" placeholder="example@email.com" className="border border-gray-400 rounded-md py-3 px-5 outline-orange-400" />
               <label className="mt-20 font-semibold">Subject</label>
-              <input type="text" placeholder="This is an optional" className="border border-gray-400 rounded-md py-3 px-5 outline-none" />
+              <input type="text" placeholder="This is an optional" className="border border-gray-400 rounded-md py-3 px-5 outline-orange-400" />
               <label className="mt-20 font-semibold">Message</label>
-              <textarea placeholder="Hi I'd like to ask about" className="border border-gray-400 rounded-md py-5 px-5 outline-none h-40"></textarea>
+              <textarea placeholder="Hi I'd like to ask about" className="border border-gray-400 rounded-md py-5 px-5 outline-orange-400 h-40"></textarea>
               <button className="bg-orange-400 text-white font-medium py-3 w-50 cursor-pointer transition duration-300 hover:bg-orange-500 rounded mt-10">Submit</button>
 
             </form>
