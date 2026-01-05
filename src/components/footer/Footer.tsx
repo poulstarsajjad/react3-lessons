@@ -8,7 +8,7 @@ function Footer() {
       <Container>
         <div className="grid grid-cols-6 gap-10">
             <div className="flex flex-col col-span-2">
-                <h3 className="text-3xl font-bold mb-10">Poul Star</h3>
+                <h3 className="text-3xl text-orange-400 font-bold mb-10">Poul Star</h3>
                 <p className="text-gray-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing <br /> Ex doloribus, <br /> exercitationem nesciunt
                 </p>
@@ -36,7 +36,7 @@ function Footer() {
             <div className="col-span-2">
                 <h3 className="text-gray-400 font-semibold mb-10">Newsletter</h3>
                 <div className="flex gap-5">
-                    <input className="border-b outline-none py-2" type="text" placeholder="Enter Your Email" />
+                    <input className="border-b outline-none py-2 focus:border-b focus:border-orange-400" type="text" placeholder="Enter Your Email" />
                     <button className="border-b cursor-pointer text-sm font-medium transition duration-300 hover:text-orange-400">SUBSCRIBE</button>
                 </div>
             </div>

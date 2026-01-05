@@ -179,7 +179,7 @@ function Navbar() {
               <button onClick={() => setOpen((p) => !p)} className="flex items-center gap-2">
                 {user && (
                   <span className="text-gray-700 text-lg font-medium">
-                    Welcome <span className="text-lg text-orange-500 font-bold">{user.username}</span>
+                    Welcome <span className="text-lg text-orange-400 font-bold">{user.username}</span>
                   </span>
                 )}
 
@@ -257,7 +257,7 @@ function Navbar() {
             </li>
 
             {/* Cart */}
-             <li className="w-7 transition duration-200 hover:scale-120">
+            <li className="w-7 transition duration-200 hover:scale-120">
                <Link to="/cart">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                </Link>

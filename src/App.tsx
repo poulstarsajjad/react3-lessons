@@ -4,7 +4,6 @@ import Shop from "./pages/shop/Shop";
 import Blog from "./pages/blog/Blog";
 import Contact from "./pages/contact/Contact";
 import Cart from "./pages/cart/Cart";
-import Auth from "./pages/auth/Auth";
 import ProductItem from "./pages/productItem/ProductItem";
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Cart />} />
-      <Route path="/auth" element={<Auth />} />
       <Route path="/shop/:id" element={<ProductItem />} />
     </Routes>
   )
