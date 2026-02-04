@@ -1,14 +1,10 @@
 import Banner from "../../components/banner/Banner";
 import Container from "../../components/container/Container";
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
 import StoreBenefits from "../../components/storeBenefits/StoreBenefits";
-
 
 function Contact() {
   return (
     <div>
-      <Navbar />
       <Banner title="Contact" />
       <div className="mt-20">
         <h1 className="text-3xl font-bold text-center mb-3">Get In Touch With Us</h1>
@@ -74,7 +70,6 @@ function Contact() {
         </Container>
         <StoreBenefits />
       </div>
-      <Footer />
     </div>
   )
 }

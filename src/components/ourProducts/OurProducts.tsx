@@ -1,25 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Product from "../product/Product";
-
-export interface Iproducts{
-    id: number;
-    title: string;
-    description: string;
-    images: string;
-    price: number;
-    rating: number
-}
+import Loading from "../loading/Loading";
+import type { Iproducts } from "../../types/types";
 
 function OurProducts() {
 
     const [products , setProducts] = useState<Iproducts[]>([]);
     const [showAll, setShowAll] = useState(false);
+    const [isLoading , setIsLoading] = useState(false);
 
     useEffect(()=>{
+        setIsLoading(true);
         axios.get("https://dummyjson.com/products?limit=20&skip=172")
         .then((result)=>{
             setProducts(result.data.products);
+            setIsLoading(false);
         })
     } , []);
 
@@ -31,13 +27,17 @@ function OurProducts() {
 
   return (
     <div>
-        <div className="grid grid-cols-4 gap-10">
-            {
-                visibleProducts.map((item)=>(
-                    <Product key={item.id} {...item} />
-                ))
-            }
-        </div>
+        {
+            isLoading ? <Loading /> : (
+                <div className="grid grid-cols-4 gap-10">
+                    {
+                        visibleProducts.map((item)=>(
+                            <Product key={item.id} {...item} />
+                        ))
+                    }
+                </div>
+            )
+        }
 
         {
             products.length > 8 && (

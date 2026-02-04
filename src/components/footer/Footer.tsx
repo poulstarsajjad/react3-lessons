@@ -1,7 +1,33 @@
+import { Link } from "react-router-dom";
 import Container from "../container/Container";
 
-
 function Footer() {
+
+    const navs = [
+        {
+            name: "Home",
+            link: "/"
+        },
+        {
+            name: "Shop",
+            link: "/shop"
+        },
+        {
+            name: "Blog",
+            link: "/blog"
+        },
+        {
+            name: "Contact",
+            link: "/contact"
+        }
+    ];
+
+    const help = [
+        {name: 'Payment Options'},
+        {name: 'Returns'},
+        {name: 'Privacy Policies'}
+    ];
+
   return (
     <div>
       <div className="h-0.5 bg-gray-300 mb-15"></div>
@@ -17,26 +43,31 @@ function Footer() {
             <div>
                 <h3 className="text-gray-400 font-semibold mb-12">Links</h3>
                 <ul className="flex flex-col gap-10 font-semibold">
-                    <li>Home</li>
-                    <li>Shop</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    {
+                        navs.map((nav)=>(
+                            <li key={nav.link} className="cursor-pointer transition duration-300 hover:text-orange-400">
+                                <Link to={nav.link}>{nav.name}</Link>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
 
             <div>
                 <h3 className="text-gray-400 font-semibold mb-12">Help</h3>
                 <ul className="flex flex-col gap-10 font-semibold">
-                    <li>Payment Options</li>
-                    <li>Returns</li>
-                    <li>Privacy Policies</li>
+                    {
+                        help.map((item)=>(
+                            <li key={item.name} className="cursor-pointer transition duration-300 hover:text-orange-400">{item.name}</li>
+                        ))
+                    }
                 </ul>
             </div>
 
             <div className="col-span-2">
                 <h3 className="text-gray-400 font-semibold mb-10">Newsletter</h3>
                 <div className="flex gap-5">
-                    <input className="border-b outline-none py-2" type="text" placeholder="Enter Your Email" />
+                    <input className="border-b outline-none py-2 focus:border-b-orange-400" type="text" placeholder="Enter Your Email" />
                     <button className="border-b cursor-pointer text-sm font-medium transition duration-300 hover:text-orange-400">SUBSCRIBE</button>
                 </div>
             </div>
@@ -45,7 +76,7 @@ function Footer() {
         <div className="h-0.5 bg-gray-300 mt-15"></div>
 
         <p className="font-medium my-10">
-            2025 Poul Star. All rights reverved
+            2026 Poul Star &copy; All rights reverved
         </p>
       </Container>
     </div>

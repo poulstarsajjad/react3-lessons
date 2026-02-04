@@ -1,5 +1,4 @@
 
-
 function StoreBenefits() {
   return (
     <div className="bg-orange-50 w-full h-50 mb-10 flex justify-around items-center">

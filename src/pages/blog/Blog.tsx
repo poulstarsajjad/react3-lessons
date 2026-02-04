@@ -1,13 +1,10 @@
 import Banner from "../../components/banner/Banner";
 import Container from "../../components/container/Container";
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
 import StoreBenefits from "../../components/storeBenefits/StoreBenefits";
 
 function Blog() {
   return (
     <div>
-      <Navbar />
       <Banner title="Blog" />
       <Container>
         <div className="flex flex-col justify-center items-center gap-15 mx-20 mt-25 mb-15">
@@ -42,7 +39,6 @@ function Blog() {
         </div>
       </Container>
       <StoreBenefits />
-      <Footer />
     </div>
   )
 }

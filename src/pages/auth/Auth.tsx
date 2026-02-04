@@ -1,8 +1,5 @@
 import { useState } from "react";
-import Navbar from "../../components/navbar/Navbar";
 import Banner from "../../components/banner/Banner";
-import Footer from "../../components/footer/Footer";
-
 
 function Auth() {
   const [isLogin, setIsLogin] = useState(true);
@@ -11,7 +8,6 @@ function Auth() {
 
   return (
     <div>
-      <Navbar />
       <Banner title="Login / Register" />
 
       <div className="flex items-center justify-center py-15">
@@ -22,10 +18,10 @@ function Auth() {
 
           <form className="flex flex-col gap-4">
             {!isLogin && (
-              <input type="text" placeholder="Username" className="border border-gray-400 py-2 px-4 outline-none rounded-md" />
+              <input type="text" placeholder="Username" className="border border-gray-400 py-2 px-4 outline-none rounded-md focus:border-orange-500" />
             )}
-            <input type="email" placeholder="Email" className="border border-gray-400 py-2 px-4 outline-none rounded-md"/>
-            <input type="password" placeholder="Password" className="border border-gray-400 py-2 px-4 outline-none rounded-md" />
+            <input type="email" placeholder="Email" className="border border-gray-400 py-2 px-4 outline-none rounded-md focus:border-orange-500"/>
+            <input type="password" placeholder="Password" className="border border-gray-400 py-2 px-4 outline-none rounded-md focus:border-orange-500" />
 
             <button type="submit" className="bg-orange-400 text-white py-2 rounded-md mt-2 cursor-pointer transition duration-300 hover:bg-orange-500">
               {isLogin ? "Login" : "Register"}
@@ -40,7 +36,6 @@ function Auth() {
           </p>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

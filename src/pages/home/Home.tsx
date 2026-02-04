@@ -1,15 +1,13 @@
 import Container from "../../components/container/Container";
-import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import Navbar from "../../components/navbar/Navbar";
 import OurProducts from "../../components/ourProducts/OurProducts";
+import ProductList from "../../components/productList/ProductList";
 import Slider from "../../components/slider/Slider";
 
 
 function Home() {
   return (
     <div>
-      <Navbar />
       <Header />
 
       <Container>
@@ -19,23 +17,9 @@ function Home() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugit minima
           </p>
         </div>
-
       
-        <div className="flex gap-10 mb-20">
-          <div className="hover:scale-95 transition duration-500 hover:bg-orange-50 text-orange-400">
-            <img src="https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/3.webp" alt="" />
-            <h4 className="text-2xl font-medium ml-5 mb-5 text-center">Jewellery</h4>
-          </div>
-
-          <div className="hover:scale-95 transition duration-500 hover:bg-orange-50 text-orange-400">
-            <img src="https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/4.webp" alt="" />
-            <h4 className="text-2xl font-medium ml-5 mb-5 text-center">shoes</h4>
-          </div>
-
-          <div className="hover:scale-95 transition duration-500 hover:bg-orange-50 text-orange-400">
-            <img src="https://cdn.dummyjson.com/product-images/womens-watches/rolex-cellini-moonphase/1.webp" alt="" />
-            <h4 className="text-2xl font-medium ml-5 mb-5 text-center">watches</h4>
-          </div>
+        <div>
+          <ProductList />
         </div>
 
         <div className="my-15 mx-auto text-center">
@@ -62,7 +46,6 @@ function Home() {
         </div>
       </div>
 
-      <Footer />
     </div>
   )
 }
